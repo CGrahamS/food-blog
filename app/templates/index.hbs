@@ -1,9 +1,11 @@
 <h1>Welcome to my asesome blog</h1>
 {{new-entry post2="post2"}}
 <ul>
-  {{#each model.entries as |entry|}}
-    {{log "Admin status: " model.admin}}
+  {{#filter-content content=model.entries properties="title" as |filteredEntries query|}}
+    {{input value=query}}
+    {{#each filteredEntries as |entry|}}
     {{entry-tile admin=model.admin entry=entry destroyEntry="destroyEntry"}}
-  {{/each}}
-  blog entries go here
+    {{/each}}
+  {{/filter-content}}
+
 </ul>
