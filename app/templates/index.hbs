@@ -2,7 +2,8 @@
 {{new-entry post2="post2"}}
 <ul>
   {{#each model.entries as |entry|}}
-    {{entry-tile entry=entry}}
+    {{log "Admin status: " model.admin}}
+    {{entry-tile admin=model.admin entry=entry destroyEntry="destroyEntry"}}
   {{/each}}
   blog entries go here
 </ul>
