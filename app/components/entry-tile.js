@@ -6,9 +6,6 @@ export default Ember.Component.extend({
       if(confirm('Are you sure you want to delete this entry????')){
         this.sendAction('destroyEntry', entry);
       }
-    },
-    update(entry, params) {
-      this.sendAction('updateEntry', entry, params);
     }
   }
 });

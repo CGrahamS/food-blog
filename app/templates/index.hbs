@@ -2,12 +2,14 @@
 {{new-entry post2="post2"}}
 <ul>
 
+{{test model.entries}}
+  <hr>
   {{#filter-content content=model.entries properties="title" as |filteredEntries query|}}
   <h3>Search By Tag or Name of Article</h3>
       {{input value=query class="form-control"}}
 
     {{#each filteredEntries as |entry|}}
-    {{entry-tile admin=model.admin entry=entry destroyEntry="destroyEntry"}}
+      {{entry-tile admin=model.admin entry=entry destroyEntry="destroyEntry"}}
     {{/each}}
   {{/filter-content}}
 

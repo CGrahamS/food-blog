@@ -1,3 +1,11 @@
 body {
   padding-top: 30px;
 }
+
+.entry-tile {
+  text-align: center;
+}
+
+.entry-tile a {
+  text-decoration: none;
+}
