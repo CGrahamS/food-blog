@@ -13,7 +13,7 @@ export default Ember.Component.extend({
         previewText: this.get('previewText'),
         text: this.get('text'),
         image: this.get('image'),
-        date: moment().format('YYYY-MM-DD')
+        date: moment().format('LLLL')
       };
       this.sendAction('post2', params);
     }
