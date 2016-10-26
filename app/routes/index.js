@@ -5,5 +5,12 @@ export default Ember.Route.extend({
     return Ember.RSVP.hash({
       entries: this.store.findAll('entry')
     });
+  },
+  actions: {
+    post2(params){
+      var newPost = this.store.createRecord('entry', params);
+      newPost.save();
+      this.transitionTo('index');
+    }
   }
 });

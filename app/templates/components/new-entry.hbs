@@ -1,0 +1,16 @@
+{{#if admin}}
+<div class="well">
+  <form class="" action="index.html" method="post">
+    <label for="title">Title</label>
+    {{input value=title id="title"}}
+    <label for="previewText">Preview Text</label>
+    {{input value=previewText id="previewText"}}
+    <label for="text">Text</label>
+    {{input value=text id="text"}}
+    <label for="image">Image</label>
+    {{input value=image id="image"}}
+    <button class="btn btn-success" type="button" name="button" {{action 'post'}}>Post!</button>
+  </form>
+
+</div>
+{{/if}}
