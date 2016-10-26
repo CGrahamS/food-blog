@@ -9,7 +9,7 @@
     <label for="image">Image</label>
     {{input value=entry.image id="image" class="form-control"}}
     <label for="">Date:</label>
-    {{input value=entry.date id="date"}}
+    {{input value=entry.date id="date"  class="form-control"}}
     <button class="btn btn-success" type="button" name="button" {{action 'update' entry}}>Done</button>
   </form>
 {{else}}

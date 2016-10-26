@@ -5,7 +5,6 @@ export default Ember.Component.extend({
   actions: {
 
     showUpdateForm() {
-      alert("aert");
       this.set('showUpdate', true);
     },
     update(entry) {
