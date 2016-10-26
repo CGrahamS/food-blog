@@ -1,4 +1,25 @@
 <body>
+  <header>
+    <div class="container-fluid">
+      <nav class="nav navbar-default navbar-fixed-top">
+      <ul class="nav navbar-nav navbar-right">
+        <li><i class="fa fa-facebook navbar-text " aria-hidden="true"></i></li>
+        <li><i class="fa fa-twitter navbar-text" aria-hidden="true"></i></li>
+        <li><i class="fa fa-pinterest-p navbar-text" aria-hidden="true"></i></li>
+        <li><i class="fa fa-instagram navbar-text" aria-hidden="true"></i></li>
+        <li><i class="fa fa-search navbar-text" aria-hidden="true"></i></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-left">
+      {{#link-to 'index' class="navbar-brand"}}
+        <i class="fa fa-cutlery" aria-hidden="true"></i>
+      {{/link-to}}
+      {{#link-to 'about' class="navbar-text"}}
+      ABOUT
+      {{/link-to}}
+    </ul>
+      </nav>
+    </div>
+  </header>
   <div class="container">
       <h1>Hello</h1>
       {{outlet}}

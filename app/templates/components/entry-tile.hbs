@@ -1,2 +1,5 @@
-<li>{{entry.title}}</li>
-<img src={{entry.image}} alt="" />
+<div class="panel panel-default">
+  <h1>{{entry.title}}</h1>
+  <h3>{{moment-from-now entry.date date}}</h3>
+  <img src={{entry.image}} alt="" class="img-responsive"/>
+</div>
