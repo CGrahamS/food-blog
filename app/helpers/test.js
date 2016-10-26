@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-export function test(params) {
+export function test(function(params)){
   var output = [];
   params.forEach(function(param){
     if(param.title === "yum"){
