@@ -2,13 +2,13 @@
 <div class="well">
   <form class="" action="index.html" method="post">
     <label for="title">Title</label>
-    {{input value=title id="title"}}
+    {{input value=title id="title" class="form-control"}}
     <label for="previewText">Preview Text</label>
-    {{input value=previewText id="previewText"}}
+    {{input value=previewText id="previewText" class="form-control"}}
     <label for="text">Text</label>
-    {{input value=text id="text"}}
+    {{textarea value=text id="text" class="form-control"}}
     <label for="image">Image</label>
-    {{input value=image id="image"}}
+    {{input value=image id="image" class="form-control"}}
     <button class="btn btn-success" type="button" name="button" {{action 'post'}}>Post!</button>
   </form>
 

@@ -17,6 +17,9 @@ export default Ember.Route.extend({
     destroyEntry(entry){
       entry.destroyRecord();
       this.transitionTo('index');
+    },
+    updateEntry() {
+
     }
   }
 });

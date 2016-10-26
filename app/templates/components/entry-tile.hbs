@@ -1,8 +1,10 @@
-<div class="panel panel-default">
-  <h1>{{entry.title}}</h1>
-  <h3>{{moment-from-now  entry.date}}</h3>
-  <img src={{entry.image}} alt="" class="img-responsive"/>
-  {{#if admin}}
-    <button class="btn btn-danger" type="button" name="button"{{action 'delete' entry}}>DELETE</button>
-  {{/if}}
-</div>
+{{#link-to 'entry' entry}}
+  <div class="panel panel-default">
+    <h1>{{entry.title}}</h1>
+    <h3>{{moment-from-now  entry.date}}</h3>
+    <img src={{entry.image}} alt="" class="img-responsive"/>
+    {{#if admin}}
+      <button class="btn btn-danger" type="button" name="button"{{action 'delete' entry}}>DELETE</button>
+    {{/if}}
+  </div>
+{{/link-to}}
