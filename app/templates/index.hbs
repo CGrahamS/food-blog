@@ -1,1 +1,7 @@
-this is index
+<h1>Welcome to my asesome blog</h1>
+<ul>
+  {{#each model.entries as |entry|}}
+    {{entry-tile entry=entry}}
+  {{/each}}
+  blog entries go here
+</ul>

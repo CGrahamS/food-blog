@@ -1,0 +1,23 @@
+{
+  "entries": [{
+    "title": "First Blog entry",
+    "previewText": "this is a preview of whats to come",
+    "text": "this is the full text of my blog entry",
+    "date": "2016-10-23",
+    "image": "http://www.wordsinspace.net/shannon/wp-content/uploads/2010/12/delicious.gif"
+  }, {
+    "title": "Aww yess, delicious",
+    "previewText": "tsecond textto come",
+    "text": "this is the second full text of my blog entry",
+    "date": "2016-10-25",
+    "image": "http://thewoksoflife.com/wp-content/uploads/2014/03/Mapo-tofu-65.jpg"
+  },
+  {
+    "title": "number three",
+    "previewText": "third preview",
+    "text": "this is the second full text of my blog entry",
+    "date": "2016-10-26",
+    "image": "http://media-wordpress.afar.com/~afarmag/wordpress/wp-content/uploads/2014/08/26A5487-e1407360471234.jpg"
+    }
+  ]
+}
