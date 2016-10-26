@@ -1,17 +1,20 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  showUpdate: true,
+  showUpdate: false,
   actions: {
+
     showUpdateForm() {
-      this.showUpdate = true;
+      alert("aert");
+      this.set('showUpdate', true);
     },
     update(entry) {
       var params = {
         title: this.get('title'),
         previewText: this.get('previewText'),
         text: this.get('text'),
-        image: this.get('image')
+        image: this.get('image'),
+        date: this.get('date')
       };
       this.set('showUpdate', false);
       this.sendAction('update', entry, params);

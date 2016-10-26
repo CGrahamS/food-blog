@@ -8,6 +8,8 @@
     {{textarea value=entry.text id="text" class="form-control"}}
     <label for="image">Image</label>
     {{input value=entry.image id="image" class="form-control"}}
+    <label for="">Date:</label>
+    {{input value=entry.date id="date"}}
     <button class="btn btn-success" type="button" name="button" {{action 'update' entry}}>Done</button>
   </form>
 {{else}}
