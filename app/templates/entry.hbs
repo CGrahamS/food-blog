@@ -7,3 +7,7 @@
   </p>
   {{update-entry entry=model update="update"}}
 </div>
+{{new-comment entry=model saveComment="saveComment"}}
+{{#each model.comments as |comment|}}
+  {{comment-tile comment=comment}}
+{{/each}}

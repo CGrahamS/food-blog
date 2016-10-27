@@ -19,5 +19,11 @@
     "date": "2016-10-26",
     "image": "http://media-wordpress.afar.com/~afarmag/wordpress/wp-content/uploads/2014/08/26A5487-e1407360471234.jpg"
     }
-  ]
+  ],
+  "comments": [{
+    "author":"",
+    "rating":"",
+    "content":"",
+    "date":""
+    }]
 }

@@ -5,5 +5,6 @@ export default DS.Model.extend({
   previewText: DS.attr("string"),
   text: DS.attr("string"),
   date: DS.attr("string"),
-  image: DS.attr("string")
+  image: DS.attr("string"),
+  comments: DS.hasMany('comments', {async: true}),
 });
