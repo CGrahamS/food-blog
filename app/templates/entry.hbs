@@ -1,14 +1,17 @@
 <div class="well">
 
-  <img src={{model.image}} alt="" class="img-responsive"/>
-  <h1>{{model.title}}</h1>
-  <h3>{{moment-from-now  model.date}}</h3>
+  {{log model.admin}}
+  <img src={{model.entry.image}} alt="" class="img-responsive"/>
+  <h1>{{model.entry.title}}</h1>
+  <h3>{{moment-from-now  model.entry.date}}</h3>
   <p>
-    {{model.text}}
+    {{model.entry.text}}
   </p>
-  {{update-entry entry=model update="update"}}
+  {{#if admin}}
+    {{update-entry entry=model.entry update="update"}}
+  {{/if}}
 </div>
-{{new-comment entry=model saveComment="saveComment" }}
-{{#each model.comments as |comment|}}
+{{new-comment entry=model.entry saveComment="saveComment" }}
+{{#each model.entry.comments as |comment|}}
   {{comment-tile comment=comment destroyComment="destroyComment"}}
 {{/each}}

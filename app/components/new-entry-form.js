@@ -11,7 +11,7 @@ export default Ember.Component.extend({
         image: this.get('image'),
         date: moment().format('LLLL')
       };
-      this.sendAction('post2', params);
+      this.sendAction('post', params);
     }
   }
 });

@@ -1,9 +1,15 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model(params) {
-    return this.store.findRecord('entry', params.entry_id);
+
+  model(params){
+
+    return Ember.RSVP.hash({
+      admin: true,
+      entry: this.store.findRecord('entry', params.entry_id)
+    });
   },
+
   actions: {
     update(entry, params) {
       Object.keys(params).forEach(function(key) {

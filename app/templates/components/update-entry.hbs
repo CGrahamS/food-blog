@@ -1,17 +1,19 @@
-{{#if showUpdate}}
-  <form class="" action="index.html" method="post">
-    <label for="title">Title</label>
-    {{input value=entry.title id="title" class="form-control"}}
-    <label for="previewText">Preview Text</label>
-    {{input value=entry.previewText id="previewText" class="form-control"}}
-    <label for="text">Text</label>
-    {{textarea value=entry.text id="text" class="form-control"}}
-    <label for="image">Image</label>
-    {{input value=entry.image id="image" class="form-control"}}
-    <label for="">Date:</label>
-    {{input value=entry.date id="date"  class="form-control"}}
-    <button class="btn btn-success" type="button" name="button" {{action 'update' entry}}>Done</button>
-  </form>
-{{else}}
-  <button class="btn btn-primary" type="button" name="button" {{action 'showUpdateForm'}}>Update</button>
+{{#if admin}}
+  {{#if showUpdate}}
+    <form class="" action="index.html" method="post">
+      <label for="title">Title</label>
+      {{input value=entry.title id="title" class="form-control"}}
+      <label for="previewText">Preview Text</label>
+      {{input value=entry.previewText id="previewText" class="form-control"}}
+      <label for="text">Text</label>
+      {{textarea value=entry.text id="text" class="form-control"}}
+      <label for="image">Image</label>
+      {{input value=entry.image id="image" class="form-control"}}
+      <label for="">Date:</label>
+      {{input value=entry.date id="date"  class="form-control"}}
+      <button class="btn btn-success" type="button" name="button" {{action 'update' entry}}>Done</button>
+    </form>
+  {{else}}
+    <button class="btn btn-primary" type="button" name="button" {{action 'showUpdateForm'}}>Update</button>
+  {{/if}}
 {{/if}}

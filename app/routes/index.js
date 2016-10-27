@@ -10,11 +10,7 @@ export default Ember.Route.extend({
   },
 
   actions: {
-    post2(params){
-      var newPost = this.store.createRecord('entry', params);
-      newPost.save();
-      this.transitionTo('index');
-    },
+  
     destroyEntry(entry){
       var comment_deletions = entry.get('comments').map(function(comment) {
         return comment.destroyRecord();
