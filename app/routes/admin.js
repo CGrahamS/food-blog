@@ -4,7 +4,7 @@ export default Ember.Route.extend({
 
   model(){
     return Ember.RSVP.hash({
-      admin: false,
+      admin:true,
       entries: this.store.findAll('entry')
     });
   },

@@ -1,5 +1,6 @@
-<li>
+<div class="well">
   {{comment.author}}
   {{comment.content}}
   {{moment-from-now comment.date}}
-</li>
+  <button {{action 'delete' comment}}>DELETE</button>
+</div>

@@ -6,7 +6,7 @@
 
   {{#filter-content content=model.entries properties="title" as |filteredEntries query|}}
   <h3>Search By Tag or Name of Article</h3>
-    {{log "nhnoafa"}}
+    
       {{input value=query class="form-control"}}
 
     {{#each filteredEntries as |entry|}}

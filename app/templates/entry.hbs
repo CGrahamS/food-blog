@@ -1,4 +1,5 @@
 <div class="well">
+
   <img src={{model.image}} alt="" class="img-responsive"/>
   <h1>{{model.title}}</h1>
   <h3>{{moment-from-now  model.date}}</h3>
@@ -7,7 +8,7 @@
   </p>
   {{update-entry entry=model update="update"}}
 </div>
-{{new-comment entry=model saveComment="saveComment"}}
+{{new-comment entry=model saveComment="saveComment" }}
 {{#each model.comments as |comment|}}
-  {{comment-tile comment=comment}}
+  {{comment-tile comment=comment destroyComment="destroyComment"}}
 {{/each}}
