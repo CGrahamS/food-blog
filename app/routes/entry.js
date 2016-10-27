@@ -3,7 +3,6 @@ import Ember from 'ember';
 export default Ember.Route.extend({
 
   model(params){
-
     return Ember.RSVP.hash({
       admin: true,
       entry: this.store.findRecord('entry', params.entry_id)

@@ -1,17 +1,35 @@
-<h1>Welcome to my sick food blog</h1>
+
+  {{#if lightningShow}}
+    <img src="http://kidshow.biz/images/lightning_ring.gif" alt="" class="lightning"/>
+  {{/if}}
+<h1 class="blogTitle">Welcome to my sick food blog</h1>
 
 {{log model.admin}}
 <ul>
 
-
-  {{#filter-content content=model.entries properties="title" as |filteredEntries query|}}
+<div class="container">
   <h3>Search By Tag or Name of Article</h3>
-      {{input value=query class="form-control"}}
+  <div class="col-sm-2 well">
 
-    {{#each filteredEntries as |entry|}}
-
-      {{entry-tile admin=model.admin entry=entry destroyEntry="destroyEntry"}}
+    {{#each model.entries as |entry|}}
+      {{#link-to 'entry' entry class="entry-link"}}
+        {{entry.date }}
+      {{/link-to}}
     {{/each}}
-  {{/filter-content}}
+
+
+  </div>
+  <div class="col-sm-10">
+    {{#filter-content content=model.entries properties="title" as |filteredEntries query|}}
+        {{input value=query class="form-control"}}
+      {{#each filteredEntries as |entry|}}
+        {{entry-tile admin=model.admin entry=entry destroyEntry="destroyEntry"}}
+      {{/each}}
+    {{/filter-content}}
+
+  </div>
+
+</div>
+
 
 </ul>

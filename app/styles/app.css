@@ -2,37 +2,60 @@ body {
   padding-top: 30px;
   background: url('https://s-media-cache-ak0.pinimg.com/originals/d2/22/12/d2221269a5cc3df830a525bbe6b32de5.jpg') center center no-repeat;
   background-attachment: fixed;
-  background-size: cover;
+  background-size: 100%;
 }
+.panel{
+  padding: 40px;
+  background: #FEFEFB;
+}
+.panel h1{
+  font-size: 3em;
+}
+.panel p{
+  font-family: "Courier New";
+}
+.col-sm-5{
+  border-left: 1px solid black;
+  height: 150%;
+}
+img.pink{
+  max-height: 200px !important;
+  opacity: .8;
+  background: pink;
+  /*overflow: hidden;*/
+}
+
 h1{
   font-family: 'Press Start 2P', cursive;
   color: white;
-  /*text-shadow:
-  0 0 7px pink,
-   0 0 17px blue,
-   13px 0 27px pink,
-   0 2px 27px red;*/
    text-shadow:
    1px 0 2px pink,
   3px 0 2px blue,
   5px 0 2px pink,
-  7px 0 2px red;
+  7px 0 2px red,
+  8px 0 11px black;
 }
 .overlay{
-  padding: 10px;
+  padding: 30px 30px 5px;
 }
 .overlay:hover{
   background: url('http://media.tumblr.com/tumblr_m1az26uMHO1qf3sji.gif');
+}
+.overlay:hover .panel{
+  box-shadow: inset 0px 0px 5px 10px  rgba(244, 0, 0, 0.4);
 }
 .entry-tile {
   text-align: center;
 }
 
-.entry-tile a {
+a:hover{
   text-decoration: none;
 }
 .overlay{
   position: relative;
+}
+.overlay:hover button{
+  display: inline-block;
 }
 .overlay:hover:after{
   margin-left: 300px;
@@ -40,22 +63,43 @@ h1{
 .overlay:after{
   margin-left: -1500px;
   overflow: hidden;
-  content: "";
-  text-shadow:  1px 1px 5px black;
+  content: "READMORE";
+  text-shadow:  1px 1px 22px black;
   text-align: center;
-  font-size: 10em;
-  font-family: 'Pacifico', cursive;
+  font-size: 3em;
+  font-family: 'Courgette', cursive;
 
   color: white;
   background: url('https://66.media.tumblr.com/c15b061360fa577cfa6fa1868bc45962/tumblr_o2d65b8VYl1so9b4uo1_500.gif');
   background-repeat: no-repeat;
-  /*background: rgba(44, 40, 222, 0.5);*/
   width: 100%;
   height: 100%;
   position: absolute;
   bottom: 0;
   left: 0;
-  /*transform: skewX(33deg);*/
   transition: all 1s ease;
-  z-index: 0;
+  z-index: 3;
+}
+button.delete{
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 99;
+}
+h1.blogTitle{
+  font-size: 4em;
+}
+img.lightning:hover{
+  position: fixed;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  z-index: 1
+}
+.col-sm-1{
+  background: white;
+}
+.container{
+  max-width: 1200px;
 }
