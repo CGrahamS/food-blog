@@ -1,7 +1,29 @@
 body {
   padding-top: 30px;
+  background: url('https://s-media-cache-ak0.pinimg.com/originals/d2/22/12/d2221269a5cc3df830a525bbe6b32de5.jpg') center center no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
-
+h1{
+  font-family: 'Press Start 2P', cursive;
+  color: white;
+  /*text-shadow:
+  0 0 7px pink,
+   0 0 17px blue,
+   13px 0 27px pink,
+   0 2px 27px red;*/
+   text-shadow:
+   1px 0 2px pink,
+  3px 0 2px blue,
+  5px 0 2px pink,
+  7px 0 2px red;
+}
+.overlay{
+  padding: 10px;
+}
+.overlay:hover{
+  background: url('http://media.tumblr.com/tumblr_m1az26uMHO1qf3sji.gif');
+}
 .entry-tile {
   text-align: center;
 }
@@ -13,25 +35,27 @@ body {
   position: relative;
 }
 .overlay:hover:after{
-  height: 100%;
+  margin-left: 300px;
 }
 .overlay:after{
+  margin-left: -1500px;
   overflow: hidden;
-  content: "read more";
+  content: "";
   text-shadow:  1px 1px 5px black;
   text-align: center;
   font-size: 10em;
   font-family: 'Pacifico', cursive;
 
   color: white;
-  background: url('http://www.anadventure.net/images/BroomsBrushes/angles.gif');
+  background: url('https://66.media.tumblr.com/c15b061360fa577cfa6fa1868bc45962/tumblr_o2d65b8VYl1so9b4uo1_500.gif');
   background-repeat: no-repeat;
   /*background: rgba(44, 40, 222, 0.5);*/
   width: 100%;
-  height: 0%;
+  height: 100%;
   position: absolute;
   bottom: 0;
   left: 0;
   /*transform: skewX(33deg);*/
-  transition: all 10s ease;
+  transition: all 1s ease;
+  z-index: 0;
 }
